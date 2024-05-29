@@ -1,6 +1,6 @@
 import customtkinter
 
-# Função para converter para binário
+# função para converter para binário
 
 
 def converter_para_binario():
@@ -11,7 +11,7 @@ def converter_para_binario():
     except ValueError:
         resultado_label.configure(text="Por favor, insira um número válido.")
 
-# Função para converter para octal
+# função para converter para octal
 
 
 def converter_para_octal():
@@ -22,7 +22,7 @@ def converter_para_octal():
     except ValueError:
         resultado_label.configure(text="Por favor, insira um número válido.")
 
-# Função para converter para hexadecimal
+# função para converter para hexadecimal
 
 
 def converter_para_hexadecimal():
@@ -34,19 +34,19 @@ def converter_para_hexadecimal():
         resultado_label.configure(text="Por favor, insira um número válido.")
 
 
-# Criação da janela principal
+# criação da janela
 janela = customtkinter.CTk()
 janela.geometry("550x550")
 
-# Adiciona um rótulo (label)
+# Adiciona uma label
 texto = customtkinter.CTkLabel(janela, text="Conversor de Bases")
 texto.pack(padx=10, pady=10)
 
-# Adiciona uma entrada de texto
+# adiciona uma entrada de texto
 num_entry = customtkinter.CTkEntry(janela, placeholder_text="Número decimal")
 num_entry.pack(padx=10, pady=10)
 
-# Adiciona botões para cada conversão
+# adiciona botões para as conversões
 botao1 = customtkinter.CTkButton(
     janela, text="Converter para Binário", command=converter_para_binario)
 botao1.pack(padx=10, pady=10)
@@ -59,13 +59,13 @@ botao3 = customtkinter.CTkButton(
     janela, text="Converter para Hexadecimal", command=converter_para_hexadecimal)
 botao3.pack(padx=10, pady=10)
 
-# Adiciona um rótulo para mostrar o resultado
+# adiciona uma label para mostrar o resultado
 resultado_label = customtkinter.CTkLabel(janela, text="Resultado: ")
 resultado_label.pack(padx=10, pady=10)
 
-# Adiciona um rótulo para o autor
+# direitos autorais
 autor_label = customtkinter.CTkLabel(janela, text="Autor: Gabriel Cézar")
 autor_label.place(relx=1.0, rely=1.0, anchor='se', x=-10, y=-10)
 
-# Executa o loop principal da janela
+# loop principal da janela
 janela.mainloop()
